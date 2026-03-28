@@ -192,7 +192,7 @@ function MovieManagerView({ onNavigate }: { onNavigate: (view: string) => void }
 
   const searchMovies = async () => {
     if (!query) return;
-    const API_KEY = import.meta.env.VITE_TMDB_API_KEY; 
+    const API_KEY = (import.meta as any).env.VITE_TMDB_API_KEY;
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}`;
     try {
       const response = await fetch(url);
@@ -668,7 +668,7 @@ function SeriesManagerView({ onNavigate }: { onNavigate: (view: string) => void 
 
   const searchSeries = async () => {
     if (!query) return;
-    const API_KEY = import.meta.env.VITE_TMDB_API_KEY; 
+    const API_KEY = (import.meta as any).env.VITE_TMDB_API_KEY; 
     const url = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}`;
     try {
       const response = await fetch(url);

@@ -1,13 +1,10 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-swc'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  build: {
-    chunkSizeWarningLimit: 1600,
-    outDir: 'dist',
-  },
-  // Isso aqui ignora avisos que travam o deploy
-  logLevel: 'info'
+  plugins: [
+    tailwindcss(),
+    react()
+  ],
 })

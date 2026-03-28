@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { supabase } from './supabase';
 import { 
-  Film, Tv, FolderTree, Users, 
-  BarChart3, FileText, Settings, Wrench, 
-  CheckCircle2, Server, Star, ChevronRight,
-  Search, ArrowLeft, Plus, Trash2, Video, Tag, ShieldBan, CheckCircle
+  Film, Tv, FolderTree, Users, BarChart3, FileText, Settings, Wrench, 
+  CheckCircle2, Server, Star, ChevronRight, Search, ArrowLeft, Plus, 
+  Trash2, Video, Tag, ShieldBan, CheckCircle 
 } from 'lucide-react';
 
 export default function App() {
